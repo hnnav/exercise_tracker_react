@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { workoutsReducer } from './workoutsReducer'
+import { workoutsReducer } from './WorkoutsReducer'
 import { plansReducer } from './PlansReducer'
 
 export const rootReducer = combineReducers({
