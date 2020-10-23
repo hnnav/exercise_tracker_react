@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
+  resources :plans 
   resources :work_outs
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

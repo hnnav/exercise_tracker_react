@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-
-WorkOut.create(date: '09/2020', workout_type: 'Running', duration: '12 minutes')
+# Plan.delete_all
+# WorkOut.delete_all
+plan = Plan.create(name: 'Get in shape for christmas', goal: 10, cut_off: '12/2020')
+workout = WorkOut.create(date: '09/2020', workout_type: 'Running', duration: 12)

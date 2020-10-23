@@ -1,5 +1,4 @@
 class WorkOutsController < ApplicationController
-  before_action :set_work_out, only: [:show, :update, :destroy]
 
   # GET /work_outs
   def index
@@ -40,12 +39,16 @@ class WorkOutsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_work_out
-      @work_out = WorkOut.find(params[:id])
-    end
+    ## def set_work_out
+    ##   @work_out = WorkOut.find(params[:id])
+    ## end
+
+    ## def set_plan
+    ##   @plan = Plan.find(params[:plan_id])
+    ## end
 
     # Only allow a trusted parameter "white list" through.
     def work_out_params
-      params.require(:work_out).permit(:date, :type, :duration)
+      params.require(:work_out).permit(:date, :workout_type, :duration)
     end
 end
