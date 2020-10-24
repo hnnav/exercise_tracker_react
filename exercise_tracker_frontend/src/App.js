@@ -1,12 +1,15 @@
 import React from 'react'
-// import Router from './componets/Router'
+
+import Router from './components/Router'
+import NavBar from './components/NavBar'
 
 const App = () => {
     return (
         <div>
-            Hello World
+            <NavBar />
+            <Router />
         </div>
     )
 }
 
-export default App
+export default App;
