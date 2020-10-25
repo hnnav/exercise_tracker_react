@@ -9,3 +9,8 @@ body {
   border-style: groove;
   border-width: medium;
 }
+
+a {
+  background-color: rgba(148, 148, 148, 0.918);
+  color: white;
+}
