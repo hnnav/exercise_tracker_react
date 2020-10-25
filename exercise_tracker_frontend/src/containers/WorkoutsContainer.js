@@ -21,4 +21,8 @@ class WorkoutsContainer extends Component {
     }
 }
 
+// const mapStateToProps = state => {
+//     return { workouts: state.workouts }
+// }
+
 export default connect(null, {fetchWorkouts})(WorkoutsContainer);

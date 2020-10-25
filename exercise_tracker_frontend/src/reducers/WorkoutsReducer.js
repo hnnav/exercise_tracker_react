@@ -3,7 +3,7 @@ export const workoutsReducer = (state = [], action) => {
         case 'FETCH_WORKOUTS': 
             return action.payload
         case 'ADD_WORKOUTS':
-            return action.payload
+            return [...state, action.payload]
         default:
             return state
     }
