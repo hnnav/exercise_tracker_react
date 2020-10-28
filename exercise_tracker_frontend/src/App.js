@@ -1,15 +1,23 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import Router from './components/Router'
 import NavBar from './components/NavBar'
+import { Component } from 'react'
+import WorkoutsList from './components/WorkoutsList'
+import WorkoutsContainer from './containers/WorkoutsContainer'
+import {fetchWorkouts} from './actions/WorkoutsActions'
 
-const App = () => {
-    return (
-        <div>
-            <NavBar />
-            <Router />
-        </div>
-    )
+class App extends Component {
+    
+    render(){
+        return (
+            <div>
+                <NavBar />
+                <Router />
+            </div>
+        )
+    }
 }
 
-export default App;
+export default connect(null, {fetchWorkouts})(App);

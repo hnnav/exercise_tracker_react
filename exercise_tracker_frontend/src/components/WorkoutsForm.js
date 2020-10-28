@@ -11,39 +11,36 @@ class WorkoutsForm extends Component {
         duration: ''
     }
 
-    handleChange = e => {
-        const { name, value } = e.target
+    handleChange = (event) => {
         this.setState({
-            [name]: value
+          [event.target.name]: event.target.value
         })
     }
 
-    handleSubmit = e => {
-        e.preventDefault()
+    handleSubmit = (event) => {
+        event.preventDefault()
         this.props.addWorkout(this.state)
+        this.setState({
+          workout_type: '',
+          date: '',
+          duration: ''
+        })
     }
 
     render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-
-                <label>Date</label>
-                <input type="text" name="date" value={this.state.date} onChange={this.handleChange}/>
-                <br/>
-
-                <label>Type of workout</label>
-                <input type="text" name="workout_type" value={this.state.workout_type} onChange={this.handleChange}/>
-                <br/>
-
-                <label>Duration in minutes</label>
-                <input type="number" name="duration" value={this.state.duration} onChange={this.handleChange}/>
-                <br/>
-
-                <input type="submit" value="Create workout"/>
-                
-            </form>
-        )
-    }
+    return (
+      <div>
+        <h1>Add a new workout</h1>
+        <form onSubmit={this.handleSubmit}>
+            <input type='text' placeholder='Date' value={this.state.date} name="date" onChange={this.handleChange}/><br/>
+            <input type='text' placeholder='Type of workout' value={this.state.workout_type} name="workout_type" onChange={this.handleChange}/><br/>
+            <input type='number' placeholder='Duration' value={this.state.duration} name="duration" onChange={this.handleChange}/><br/>
+            <input type="submit"/>
+        </form>
+      </div>
+    )
+  }
 }
 
-export default connect(null, { addWorkout })(WorkoutsForm);
+
+export default connect(null, {addWorkout})(WorkoutsForm)

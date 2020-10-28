@@ -4,6 +4,7 @@ import { Switch, Route} from 'react-router-dom'
 import Home from './Home'
 import PlansContainer from '../containers/PlansContainer'
 import WorkoutsContainer from '../containers/WorkoutsContainer'
+import WorkoutsList from './WorkoutsList'
 
 const Router = () => {
     return (
