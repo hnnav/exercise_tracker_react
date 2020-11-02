@@ -1,3 +1,8 @@
+## Currently working on:
+
+- form dispatches an action, but doesn't update redux state
+- state is only updated at page refresh ??
+
 ## Project Requirements:
 
 - The code should be written in ES6 as much as possible

@@ -42,5 +42,7 @@ class WorkoutsForm extends Component {
   }
 }
 
+// const mapStateToProps = 
+
 
 export default connect(null, {addWorkout})(WorkoutsForm)

@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import Router from './components/Router'
 import NavBar from './components/NavBar'
 import { Component } from 'react'
-import WorkoutsList from './components/WorkoutsList'
-import WorkoutsContainer from './containers/WorkoutsContainer'
 import {fetchWorkouts} from './actions/WorkoutsActions'
 
 class App extends Component {
