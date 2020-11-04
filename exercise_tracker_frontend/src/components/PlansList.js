@@ -16,7 +16,7 @@ class PlansList extends React.Component {
             {this.props.plans.map(plan => 
                 <ul key={plan.id}>
                     <li >
-                        {plan.name} - {plan.goal} - {plan.cut_off}
+                        {plan.name} - complete {plan.goal} workouts by {plan.cut_off}
                     </li>
                 </ul>
         )}
